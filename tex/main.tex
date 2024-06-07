@@ -1,0 +1,66 @@
+\documentclass[
+    a4paper,
+    twoside=false
+]{kaobook}
+
+\ifxetexorluatex
+	\usepackage[babelshorthands]{polyglossia}
+	\setmainlanguage{russian}
+    \setotherlanguage{english}
+\else
+	\usepackage[russian, english]{babel}
+\fi
+\usepackage[autostyle]{csquotes}
+
+\usepackage{microtype}
+
+\usepackage{kaobiblio}
+\addbibresource{FormalLanguageConstrainedReachabilityLectureNotes.bib}
+
+\usepackage[framed=true]{kaotheorems}
+
+\usepackage{kaorefs}
+
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+
+
+\usetikzlibrary{fit,calc,automata,positioning}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations.pathmorphing}
+
+\tikzset{
+    %->, % makes the edges directed
+    %>=stealth’, % makes the arrow heads bold
+    node distance=4cm, % specifies the minimum distance between two nodes. Change if necessary.
+    %every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+    initial text=$ $, % sets the text that appears on the start arrow
+}
+
+\title{О достижимости с ограничениями в терминах формальных языков}
+\author{Семён Григорьев}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+\tableofcontents
+
+\mainmatter
+\setchapterstyle{kao}
+
+\input{List_of_contributors}
+\input{Introduction}
+\input{LinearAlgebra}
+\input{GraphTheoryIntro}
+\input{FormalLanguageTheoryIntro}
+
+\backmatter
+\setchapterstyle{plain}
+
+\printbibliography
+
+\end{document}
